@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="login my-5 text-center">
+        <div class="container w-75 m-auto p-5">
+            <h1> Smart Login System </h1>
+            <input class="form-control my-3 text-white" id="userNameInput" placeholder="Enter Your name" type="text">
+            <p class="text-danger d-none" id="userNameAlert"> include at least 3 letter </p>
+
+            <input class="form-control my-3 text-white" id="userEmailInput" required placeholder="Enter Your Email" type="email">
+            <p class="text-danger d-none" id="userEmailAlert"> name@example.com </p>
+
+            <input class="form-control my-3 text-white" id="userPasswordInput" required placeholder="Enter Your Password" type="password"> 
+            <p class="text-danger d-none" id="userPasswordAlert"> you must strength your password, from 5 to 15 characters</p>
+
+            <p class="text-success d-none" id="successMsg"> Success</p> 
+
+            <p class="text-danger d-none" id="accountExist"> this account is exist !</p> 
+            <p class="text-danger d-none" id="tryAgainMsg"> signUp failed ! try again</p> 
+            <button class="btn btn-outline-info w-100 my-3" onclick="signUpUser()">Sign Up</button>
+            <p class="text-white d-block"> Don’t have an account? <a href="./login.html" class="text-white text-decoration-none">SignIn</a></p>
+            <a href="./login.html" class="d-none btn btn-outline-success text-white w-25 m-auto" id="signIn">signin</a>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"> </script>
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>
