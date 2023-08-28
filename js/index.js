@@ -156,7 +156,7 @@ function logIn() {
 // welcome js
 
 function displayWelcomeUser(){
-    var userName = localStorage.getItem('sessionUserName');
+    var userName = JSON.parse(localStorage.getItem('sessionUserName'));
     
     var userNameWelcome = document.getElementById('userNameWelcome')
     userNameWelcome.innerHTML = 'Welcome ' +userName;
