@@ -142,7 +142,7 @@ function logIn() {
         && userInfo[i].password.toLowerCase() == loginPassword.value.toLowerCase()){
 
         localStorage.setItem('sessionUserName', JSON.stringify(userInfo[i].name));
-        window.location.href = '../welcome.html'; // Redirect to welcome page
+        window.location.href = './welcome.html'; // Redirect to welcome page
         return true;
     }
 }
