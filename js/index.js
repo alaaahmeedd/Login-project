@@ -165,6 +165,6 @@ function displayWelcomeUser(){
 
 function logout(){
     localStorage.removeItem('sessionUserName');
-    window.location.href = './login.html'; // replace 'login.html' with the path to your login page
+    window.location.href = './index.html'; // replace 'index.html' with the path to your login page
     
 }
