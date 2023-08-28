@@ -18,7 +18,6 @@ if( localStorage.getItem('users') == null ){ // awl mara ysgel
 }
 else{
     userInfo = JSON.parse(localStorage.getItem('users'));
-
 }
 
 function signUpUser(){
@@ -125,9 +124,6 @@ function isExist(){
 
 // login js
 
-
-
-
 function logIn() {
     var loginEmail = document.getElementById('loginEmail');
     var loginPassword = document.getElementById('loginPassword');
@@ -145,7 +141,7 @@ function logIn() {
         if(userInfo[i].email.toLowerCase() == loginEmail.value.toLowerCase()
         && userInfo[i].password.toLowerCase() == loginPassword.value.toLowerCase()){
 
-        localStorage.setItem('sessionUserName',userInfo[i].name);
+        localStorage.setItem('sessionUserName', JSON.stringify(userInfo[i].name));
         window.location.href = '../welcome.html'; // Redirect to welcome page
         return true;
     }
@@ -169,5 +165,6 @@ function displayWelcomeUser(){
 
 function logout(){
     localStorage.removeItem('sessionUserName');
+    window.location.href = './login.html'; // replace 'login.html' with the path to your login page
     
 }
